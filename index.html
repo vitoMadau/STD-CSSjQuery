@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Awesome Document</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="./css/bootstrap.min.css" >
+<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+<script type="js/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="./js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+  <!--put form here-->
+  <form>
+   <h3>Login</h3>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email </label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('form').submit(function(e) {
+      e.preventDefault();
+      $('#saveModal').modal('show');
+    });
+    $('.btn-login').click(function(e) {
+      e.preventDefault();
+      $('#saveModal').modal('hide');
+      $('#successModal').modal('show');
+    })
+  });
+</script>
+
+</div>
+</body>
+</html>
